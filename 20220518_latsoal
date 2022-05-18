@@ -1,0 +1,50 @@
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a[10];
+    int x,y,z,hasil;
+    char aritmatika;
+    
+    cout<<"Masukkan nilai 1 = ";
+    cin>>x;
+    
+    cout<<"Masukkan nilai 2 = ";
+    cin>>y;
+    
+    cout<<"Pilih Operator (+/-/x/:) = ";
+    cin>>aritmatika;
+    
+    cout<<"Hasil = ";
+    cout<<x<<aritmatika<<y;
+    
+    if(aritmatika == '+'){
+        hasil = x+y;
+    }
+    else if (aritmatika == '-'){
+         hasil = x-y;
+     }
+     else if (aritmatika == ':'){
+         hasil = x/y;
+     }
+    else if ( aritmatika == 'x'){
+        hasil = x*y;
+    }
+    else{
+        cout<<"error"<<endl;
+    }
+    cout<<"="<<hasil<<endl;
+    
+    for(z=0;hasil>0; z++){
+        a[z] = hasil%2;
+        hasil = hasil/2;
+    }
+    cout << "Angka binernya =";
+    
+    for(z=z-1;z>=0;z--){
+        cout<<a[z];
+    }
+    cout<<endl;
+    return 0;
+}
